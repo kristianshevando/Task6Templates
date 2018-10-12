@@ -38,6 +38,22 @@
     },
     "resources": [
         {
+            "apiVersion": "2016-09-01",
+            "name": "[parameters('hostingPlanName')]",
+            "type": "Microsoft.Web/serverfarms",
+            "location": "[parameters('location')]",
+            "properties": {
+                "name": "[parameters('hostingPlanName')]",
+                "workerSizeId": "[parameters('workerSize')]",
+                "numberOfWorkers": "1",
+                "hostingEnvironment": "[parameters('hostingEnvironment')]"
+            },
+            "sku": {
+                "Tier": "[parameters('sku')]",
+                "Name": "[parameters('skuCode')]"
+            }
+        },
+        {
             "apiVersion": "2016-03-01",
             "name": "[parameters('name')]",
             "type": "Microsoft.Web/sites",
@@ -57,22 +73,7 @@
                 "hostingEnvironment": "[parameters('hostingEnvironment')]"
             },
             "location": "[parameters('location')]"
-        },
-        {
-            "apiVersion": "2016-09-01",
-            "name": "[parameters('hostingPlanName')]",
-            "type": "Microsoft.Web/serverfarms",
-            "location": "[parameters('location')]",
-            "properties": {
-                "name": "[parameters('hostingPlanName')]",
-                "workerSizeId": "[parameters('workerSize')]",
-                "numberOfWorkers": "1",
-                "hostingEnvironment": "[parameters('hostingEnvironment')]"
-            },
-            "sku": {
-                "Tier": "[parameters('sku')]",
-                "Name": "[parameters('skuCode')]"
-            }
         }
+        
     ],
 }
