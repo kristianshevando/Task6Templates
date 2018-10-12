@@ -14,17 +14,8 @@
         "location": {
             "value": "West Europe"
         },
-        "sku": {
-            "value": "Standard"
-        },
-        "workerSize": {
-            "value": "0"
-        },
         "serverFarmResourceGroup": {
             "value": "KristianResourceGroup"
-        },
-        "skuCode": {
-            "value": "S1"
         },
         "subscriptionId": {
             "value": "ae8ab787-c66f-4733-aed2-228ab3e8523b"
