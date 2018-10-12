@@ -46,7 +46,7 @@
                     "connectionStrings": [
                         {
                             "name": "defaultConnection",
-                            "ConnectionString": "[concat('Data Source=tcp:' , reference('Microsoft.SQL/servers/kristianserver').fullyQualifiedDomainName , ',1433;Initial Catalog=kristianDB;User Id=', parameters('administratorLogin'),'@',reference('Microsoft.SQL/servers/krsitianserver').fullyQualifiedDomainName,';Password=',parameters('administratorLoginPassword'),';')]",
+                            "ConnectionString": "[concat('Data Source=tcp:' , 'kristianserver.database.windows.net' , ',1433;Initial Catalog=kristianDB;User Id=', parameters('administratorLogin'),'@','kristianserver.database.windows.net',';Password=',parameters('administratorLoginPassword'),';')]",
                             "type": "SQLAzure"
                         }
                     ],
