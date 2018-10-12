@@ -1,0 +1,53 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "administratorLogin": {
+            "value": "kristian"
+        },
+        "administratorLoginPassword": {
+            "reference":  {
+                "keyVault":  {
+                  "id":  "/subscriptions/ae8ab787-c66f-4733-aed2-228ab3e8523b/resourceGroups/KristianResourceGroup/providers/Microsoft.KeyVault/vaults/kristianVault"
+                  },
+                "secretName":  "kristianPassword"
+    }
+        },
+        "collation": {
+            "value": "SQL_Latin1_General_CP1_CI_AS"
+        },
+        "databaseName": {
+            "value": "kristianDB"
+        },
+        "tier": {
+            "value": "Standard"
+        },
+        "skuName": {
+            "value": "S0"
+        },
+        "location": {
+            "value": "westeurope"
+        },
+        "maxSizeBytes": {
+            "value": 268435456000
+        },
+        "sampleName": {
+            "value": ""
+        },
+        "serverName": {
+            "value": "kristianserver"
+        },
+        "zoneRedundant": {
+            "value": false
+        },
+        "licenseType": {
+            "value": ""
+        },
+        "enableATP": {
+            "value": false
+        },
+        "allowAzureIps": {
+            "value": true
+        }
+    }
+}

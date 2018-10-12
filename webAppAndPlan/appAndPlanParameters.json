@@ -1,0 +1,44 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "name": {
+            "value": "KristianWebApp"
+        },
+        "hostingPlanName": {
+            "value": "KristianAppPlan"
+        },
+        "hostingEnvironment": {
+            "value": ""
+        },
+        "location": {
+            "value": "West Europe"
+        },
+        "sku": {
+            "value": "Standard"
+        },
+        "workerSize": {
+            "value": "0"
+        },
+        "serverFarmResourceGroup": {
+            "value": "KristianResourceGroup"
+        },
+        "skuCode": {
+            "value": "S1"
+        },
+        "subscriptionId": {
+            "value": "ae8ab787-c66f-4733-aed2-228ab3e8523b"
+        },
+        "administratorLogin": {
+            "value": "kristian"
+        },
+        "administratorLoginPassword": {
+            "reference":  {
+                "keyVault":  {
+                  "id":  "/subscriptions/ae8ab787-c66f-4733-aed2-228ab3e8523b/resourceGroups/KristianResourceGroup/providers/Microsoft.KeyVault/vaults/kristianVault"
+                  },
+                "secretName":  "kristianPassword"
+            }
+        },
+    }
+}
